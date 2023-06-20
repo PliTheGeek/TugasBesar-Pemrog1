@@ -28,3 +28,46 @@ def main():
 
 if __name__ == "__main__":
     main()
+
+# Bagian Dhafin
+def parkir_masuk(parkiran):
+
+
+
+
+
+
+
+
+
+
+
+# Bagian 
+def cek_kapasitas_parkir(parkiran):
+
+
+
+
+
+
+
+
+
+
+
+# Bagian Maria
+def parkir_keluar(parkiran):
+
+
+
+
+
+
+
+
+
+
+
+
+# Bagian Agil
+def parkir_keluar_program(parkiran):
