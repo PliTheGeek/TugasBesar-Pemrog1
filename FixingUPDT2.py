@@ -40,7 +40,7 @@ while True:
             jamKeluar = int(input("Jam Keluar : "))
             lamanya = jamKeluar - jamMasuk
             
-            if lamanya <= 1:
+            if lamanya == 1:
                 print("gratis")
             elif lamanya >= 3:
                 print(" Rp. 2000")
