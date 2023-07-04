@@ -1,19 +1,20 @@
-occupied = [ 23, 42, 1, 50, 4, 2, 6,20 ]
+print("\n")
+
+occupied = []
 while True:
 #=====================================================================================#
     def sistem_parkiran(pilih):
-        
         if pilih == "1":
         
             while True:
                 
-                print(f"Parkiran ini ada 50 slot")
+                print(f"\nParkiran ini ada 50 slot")
                 print(f"Dan nomor tempat parkir yang terpakai di ")
 
                 for i in occupied:
-                    print (i, end=" - ")
+                    print (i, end=" - ",)
 
-                lokasi = int(input("Dimana kamu akan parkir : "))
+                lokasi = int(input("\nDimana kamu akan parkir : "))
 
                 if lokasi > 50 :
                     print("Slot Parkir tidak lebih dari 50!, ")
@@ -29,31 +30,39 @@ while True:
                     print()
 #=====================================================================================#
         elif pilih == "2":
+            while True:
             
-            for i in occupied:
-                print (i,end=" - ")
+                for i in occupied:
+                    print(f"Ini List Nya | {i}",end=" - ")
+                keluar_lokasi = int(input("\nMasukan Lokasi Parkir Mu Sebelumnya : ", end=""))
 
-            keluar_lokasi = int(input("Masukan Lokasi Parkir Mu Sebelumnya : "))
-            occupied.remove(keluar_lokasi)
+                if keluar_lokasi not in (occupied):
+                    print("Tolong Masukan Ulang")
 
-            jamMasuk = int(input("Masukan Jam awal masuk : "))
-            jamKeluar = int(input("Jam Keluar : "))
-            lamanya = jamKeluar - jamMasuk
-            
-            if lamanya == 1:
-                print("gratis")
-            elif lamanya >= 3:
-                print(" Rp. 2000")
-            elif lamanya >= 6:
-                print(" Rp. 3000")
-            elif lamanya >= 12:
-                print(" Rp. 5000")
-            else:
-                print(" Rp. 10000")
+
+                else:
+                    occupied.remove(keluar_lokasi)
+
+                    LamaJam = int(input("Berapa lama parkir : "))
+
+                    if LamaJam == 1:
+                        print("gratis")
+                    elif LamaJam >= 2:
+                        print(" Rp. 2000")
+                    elif LamaJam >= 6:
+                        print(" Rp. 3000")
+                    elif LamaJam >= 12:
+                        print(" Rp. 5000")
+                    else:
+                        print(" Rp. 10000")
+                    break
 
         elif pilih == "3":
+            print("\nIni List Nya:")
             for i in occupied:
-                print (i, end=" - ")
+                print (i,end=" - ")
+            print()
+                
 
 #=========================================================================================#
     print("Selamat datang di Parkiran Motor! Silahkan pilih menu yang anda inginkan")
@@ -65,7 +74,7 @@ while True:
     pilih = input("Masukan Pilihanmu : ")
     sistem_parkiran(pilih)
 
-    if pilih == "Matikan Daya":
+    if pilih == "Keluar Proggram":
             break
             print("--> TERIMAKASIH SUDAN MENGGUNAKAN PROGRAM INI <--")
     elif pilih in ["1", "2", "3"]:
