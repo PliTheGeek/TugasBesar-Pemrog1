@@ -29,12 +29,14 @@ while True:
                     print("Tolong Masukan Lokasi yang lain...")
                     print()
 #=====================================================================================#
+        
         elif pilih == "2":
             while True:
             
+                print("Ini List Nya | ")
                 for i in occupied:
-                    print(f"Ini List Nya | {i}",end=" - ")
-                keluar_lokasi = int(input("\nMasukan Lokasi Parkir Mu Sebelumnya : ", end=""))
+                    print(i,end=" - ")
+                keluar_lokasi = int(input("Masukan Lokasi Parkir Mu Sebelumnya : "))
 
                 if keluar_lokasi not in (occupied):
                     print("Tolong Masukan Ulang")
@@ -74,10 +76,11 @@ while True:
     pilih = input("Masukan Pilihanmu : ")
     sistem_parkiran(pilih)
 
-    if pilih == "Keluar Proggram":
-            break
-            print("--> TERIMAKASIH SUDAN MENGGUNAKAN PROGRAM INI <--")
-    elif pilih in ["1", "2", "3"]:
+    if pilih == "Keluar Program":    
+        print("--> TERIMAKASIH SUDAH MENGGUNAKAN PROGRAM INI <--")
+        break
+    
+    elif pilih in ["1", "2", "3"]: #Exception Untuk Ngilangin Minor Masukan Pilihan Di Line 76
         print()
     else:
         print("\nTolong Masukan Ulang\n")
